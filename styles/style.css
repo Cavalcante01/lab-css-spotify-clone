@@ -7,37 +7,28 @@ White: #FFF
 
 */
 /* Reset de estilos básicos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 html,
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Releway";
   font-size: 16px;
   font-weight: lighter;
   margin-top: 0px;
   padding: 0%;
-  margin-right: 0px;
   margin-left: 0px;
-
+  margin-right: 0px;
 }
 
 .firstHeader {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #000;
-  color: #fff;
   flex-direction: row;
   width: 100%;
   height: 6vw;
+  justify-content: space-between;
+  align-items: center;
 }
 
-img .spotifyLogo {
+.spotifyLogo {
   width: 12vw;
   height: 4vw;
   margin-left: 2rem;
@@ -61,12 +52,38 @@ li {
   font-weight: lighter;
 }
 
-
 header {
-  height: 75vw;
+  height: 70vw;
   background-size: cover;
-  background-image:U;
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.textCenter {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: lighter;
+}
+
+.textCenter h1 {
+  font-size: 7rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-weight: lighter;
+}
+
+.textCenter p {
+  width: 55vw;
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 3.5px;
+  font-weight: lighter;
 }
 
 .heading {
@@ -82,31 +99,100 @@ header {
   margin-bottom: 5px;
 }
 
-
-
 .horizontal_line {
   background-color: #00b172;
-  width: 375px;
+  width: 400px;
   height: 5px;
   border-top: 5px;
-  margin-top: 150px;
 }
 
-
-
-.spotifyicons {
+.spotifyIcons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: baseline;
   width: 100%;
+  margin-top: 150px;
+  margin-bottom: 125px;
 }
 
-.contentsection {
+.spotifyIcons .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+}
+
+.icon img {
+  height: 150px;
+}
+
+.icon h2 {
+  width: 350px;
+  margin: 20px;
+  color: #00b172;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.icon p {
+  width: 300px;
+  line-height: 120%;
+  font-size: 2rem;
+  text-align: center;
+  color: #696969;
+}
+
+/* paramos aqui  */
+
+.greenSection {
+  background-color: #00b172;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100px;
+  margin: 50px;
+  padding: 100px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  width: 100%;
+}
+
+.sectionTitle h1 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 4px;
+  margin-top: 0px;
+}
+
+.sectionTitle .horizontal_line {
+  background-color: white;
+  width: 43vw;
+  height: 5px;
+
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   height: 100%;
   gap: 0;
 }
@@ -124,17 +210,99 @@ header {
 }
 
 .content h3 {
-  font-size: 3rem;
-  font-weight: bold;
   color: white;
+  font-size: 3rem;
   text-align: left;
+  font-weight: bold;
 }
 
 .content p {
+  width: 90%;
   font-size: 2rem;
-  font-weight: lighter;
   margin: 0px;
   color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.logo img {
+  width: 60%;
+}
+
+.appSection {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+
+.appSection img {
   width: 100%;
 }
 
+@media screen and (min-width: 950px) and (max-width: 1500px) {
+  .greenSection {
+    flex-direction: column;
+  }
+
+  .contentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sectionTitle h1 {
+    font-size: 2.5rem;
+  }
+
+  .sectionTitle .horizontal_line {
+    width: 0%;
+    height: 0px;
+  }
+
+  .content h3 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+  }
+
+  .content p {
+    font-size: 2rem;
+    font-weight: lighter;
+  }
+
+  .logo {
+    align-self: center;
+    width: 30vw;
+  }
+
+  .content p {
+    font-size: 2rem;
+    width: 160%;
+  }
+
+  .appSection {
+    margin-top: 10px;
+    width: 40vw;
+  }
+
+  .appSection img {
+    width: 40vw;
+  }
+}
+
+/* comecar aqui */
+@media screen and (min-width: 680px) and (max-width: 950px) {
+  .firstHeader {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
